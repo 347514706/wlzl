@@ -29,7 +29,7 @@ public class UserController {
         String pwd = userClient.login(user);
         if (pwd.equals(user.getPassword())){
             session.setAttribute("loginUser",user.getUsername());
-            return "dashboard";
+            return "add";
         }else {
            model.addAttribute("msg","用户名密码错误");
             return "login";

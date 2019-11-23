@@ -3,6 +3,7 @@ package xyz.wlzl.wplzwebjsp.client;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import xyz.wlzl.wplzwebjsp.entity.ActiveTbl;
 
 import java.util.List;
@@ -18,4 +19,7 @@ public interface ActiveClient {
 
     @RequestMapping("/activeDel")
     void activeDel(ActiveTbl activeTbl);
+
+    @RequestMapping("/activeFindOne")
+    ActiveTbl activeFindOne(@RequestParam(value = "id") Integer id);
 }

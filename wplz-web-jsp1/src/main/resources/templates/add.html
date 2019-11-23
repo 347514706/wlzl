@@ -1,348 +1,175 @@
 <!DOCTYPE html>
+<!-- saved from url=(0052)http://getbootstrap.com/docs/4.0/examples/dashboard/ -->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-	    <meta charset="utf-8">
-    <title>文章录入</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
-      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
 
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" th:href="@{/assert/js/bootstrap.min.js}"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
+		<title>文章录入</title>
+		<!-- Bootstrap core CSS -->
+		<link href="asserts/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.0.0/css/bootstrap.css}" rel="stylesheet">
 
-    <meta name="description" content="Dashboard">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!--Basic Styles-->
-    <link href="style/bootstrap.css" th:href="@{/asserts/style/bootstrap.css}" rel="stylesheet">
-    <link href="style/font-awesome.css" th:href="@{/asserts/style/font-awesome.css}" rel="stylesheet">
-    <link href="style/weather-icons.css" th:href="@{/asserts/style/weather-icons.css}" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="asserts/css/dashboard.css" th:href="@{/asserts/css/dashboard.css}" rel="stylesheet">
+		<script charset="utf-8" src="kindeditor-all-min.js" th:src="@{/asserts/js/kindeditor-all-min.js}"></script>
+		<script charset="utf-8" src="lang/zh-CN.js" th:src="@{/asserts/lang/zh-CN.js}"></script>
+		<script charset="utf-8" src="js/jquery-2.0.0.min.js" th:src="@{/asserts/js/jquery-2.0.0.min.js}"></script>
+		<style type="text/css">
+			/* Chart.js */
+			
+			@-webkit-keyframes chartjs-render-animation {
+				from {
+					opacity: 0.99
+				}
+				to {
+					opacity: 1
+				}
+			}
+			
+			@keyframes chartjs-render-animation {
+				from {
+					opacity: 0.99
+				}
+				to {
+					opacity: 1
+				}
+			}
+			
+			.chartjs-render-monitor {
+				-webkit-animation: chartjs-render-animation 0.001s;
+				animation: chartjs-render-animation 0.001s;
+			}
+		</style>
+		<script LANGUAGE="JavaScript">
+            KindEditor.ready(function (K) {
+                //  window.editor = K.create('#editor_id'); 
+                editor1 = K.create("textarea[id='editor_id']", {
 
-    <!--Beyond styles-->
-    <link id="beyond-link" href="style/beyond.css" th:href="@{/asserts/style/beyond.css}" rel="stylesheet" type="text/css">
-    <link href="style/demo.css" th:href="@{/asserts/style/demo.css}" rel="stylesheet">
-    <link href="style/typicons.css" th:href="@{/asserts/style/typicons.css}" rel="stylesheet">
-    <link href="style/animate.css" th:href="@{/asserts/style/animate.css}" rel="stylesheet">
-	<link href="css/bootstrap-combined.min.css" th:href="@{/asserts/css/bootstrap-combined.min.css}" type="text/css" rel="stylesheet"/>
-    <script charset="utf-8" src="kindeditor-all-min.js" th:src="@{/asserts/js/kindeditor-all-min.js}"></script>
-    <script charset="utf-8" src="lang/zh-CN.js" th:src="@{/asserts/lang/zh-CN.js}"></script>
-    <script charset="utf-8" src="js/jquery-2.0.0.min.js" th:src="@{/asserts/js/jquery-2.0.0.min.js}"></script>
-    <script src="/js/formrecive.js" th:src="@{/asserts/js/formrecive.js}"></script>
-    
-</head>
+                    resizeType: 1,
 
-<script LANGUAGE="JavaScript">
-    KindEditor.ready(function (K) {
-        //  window.editor = K.create('#editor_id'); 
-        editor1 = K.create("textarea[id='editor_id']", {
+                    allowPreviewEmoticons: false,
 
-            resizeType: 1,
+                    allowImageUpload: true,//允许上传图片
 
-            allowPreviewEmoticons: false,
+                    allowFileManager: true, //允许对上传图片进行管理
 
-            allowImageUpload: true,//允许上传图片
+                    uploadJson: '/jsp/upload_json.jsp', //上传图片的java代码，只不过放在jsp中
 
-            allowFileManager: true, //允许对上传图片进行管理
+                    fileManagerJson: '/jsp/file_manager_json.jsp',
 
-            uploadJson: '/jsp/upload_json.jsp', //上传图片的java代码，只不过放在jsp中
+                    afterUpload: function () {
+                        this.sync();
+                    }, //图片上传后，将上传内容同步到textarea中
 
-            fileManagerJson: '/jsp/file_manager_json.jsp',
+                    afterBlur: function () {
+                        this.sync();
+                    },   ////失去焦点时，将上传内容同步到textarea中
 
-            afterUpload: function () {
-                this.sync();
-            }, //图片上传后，将上传内容同步到textarea中
+                    items: [
 
-            afterBlur: function () {
-                this.sync();
-            },   ////失去焦点时，将上传内容同步到textarea中
+                        'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
 
-            items: [
+                        'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
 
-                'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                        'insertunorderedlist', '|', 'emoticons', 'link', 'media', '|', 'image']
 
-                'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                });
+            });
 
-                'insertunorderedlist', '|', 'emoticons', 'link', 'media', '|', 'image']
+            KindEditor.sync();
 
-        });
-    });
 
-    KindEditor.sync();
+		</script>
+	</head>
 
-    function validate() {
+	<body>
+		<!--引入抽取的topbar-->
+		<!--模板名：会使用thymeleaf的前后缀配置规则进行解析-->
+		<div th:replace="commons/bar::topbar"></div>
 
-        /*var title = $.trim($("#title").val());
-        var adtiveDesc = $.trim($("#editor_id").val());
+		<div class="container-fluid">
+			<div class="row">
+				<!--引入侧边栏-->
+				<div th:replace="commons/bar::#sidebar(activeUri='active')"></div>
 
-        editor1.sync();
-        adtiveDesc = $("#editor_id").val();
-        if (adtiveDesc == "") {
-            alert("内容不能为空")
-
-            return false;
-        }
-        alert(adtiveDesc);*/
-        /*return true;*/
-
-        var params = $("#myform").serialize();
-        $.ajax( {
-            type : 'get',
-            url : '/addActive',
-            data : params,
-            dataType:'json',
-            success : function(n) {
-                alert( n.msg);
-                window.location.href="list.html";
-            }
-        });
-
-    }
-
-    //上传文件
-    /*KindEditor.create("#editor_id",{
-        uploadJson: "文件上传路径",   // 其中附带参数dir=image、dir=flash、dir=file
-        filePostName: "上传文件的POST的name名",
-    });*/
-
-    //远程文件管理
-    /* KindEditor.create("#editor_id",{
-
-         fileManagerJson: "文件管理的路径",       // django中，urls中设置路径。
-         allowFileManager:true,   //kindeditor中，上传图片时，增加图片空间按钮。
-     });*/
-//    var thisURL = document.URL;
-//    var  getval =thisURL.split('?')[1];
-//    var showval= getval.split("=")[1];
-//    $.ajax({
-//        type : 'get',
-//        url : '/activeFind?id='+showval,
-//        data : params,
-//        dataType:'json',
-//        success : function(n) {
-//            alert( n.msg);
-//            window.location.href="list.html";
-//        }
-//    });
-</script>
-
-<body>
-	<!-- 头部 -->
-	<div class="navbar">
-    <div class="navbar-inner">
-        <div class="navbar-container">
-            <!-- Navbar Barnd -->
-            <div class="navbar-header pull-left">
-                <a href="#" class="navbar-brand">
-                    <small>
-                            <img src="images/logo.png" th:src="@{asserts/images/logo.png}" alt="">
-                        </small>
-                </a>
-            </div>
-            <!-- /Navbar Barnd -->
-            <!-- Sidebar Collapse -->
-            <div class="sidebar-collapse" id="sidebar-collapse">
-                <i class="collapse-icon fa fa-bars"></i>
-            </div>
-            <!-- /Sidebar Collapse -->
-            <!-- Account Area and Settings -->
-            <div class="navbar-header pull-right">
-                <div class="navbar-account">
-                    <ul class="account-area">
-                        <li>
-                            <a class="login-area dropdown-toggle" data-toggle="dropdown">
-                                <div class="avatar" title="View your public profile">
-                                    <img src="images/adam-jansen.jpg" th:src="@{/asserts/images/adam-jansen.jpg}">
-                                </div>
-                                <section>
-                                    <h2><span class="profile"><span>admin</span></span></h2>
-                                </section>
-                            </a>
-                            <!--Login Area Dropdown-->
-                            <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
-                                <li class="username"><a>David Stevenson</a></li>
-                                <li class="dropdown-footer">
-                                    <a href="#">
-                                            退出登录
-                                        </a>
-                                </li>
-                                <li class="dropdown-footer">
-                                    <a href="#">
-                                            修改密码
-                                        </a>
-                                </li>
-                            </ul>
-                            <!--/Login Area Dropdown-->
-                        </li>
-                        <!-- /Account Area -->
-                        <!--Note: notice that setting div must start right after account area list.
-                            no space must be between these elements-->
-                        <!-- Settings -->
-                    </ul>
-                </div>
-            </div>
-            <!-- /Account Area and Settings -->
-        </div>
-    </div>
-</div>
-
-	<!-- /头部 -->
-	
-	<div class="main-container container-fluid">
-		<div class="page-container">
-			            <!-- Page Sidebar -->
-            <div class="page-sidebar" id="sidebar">
-                <!-- Page Sidebar Header-->
-                <div class="sidebar-header-wrapper">
-                    <input class="searchinput" type="text">
-                    <i class="searchicon fa fa-search"></i>
-                    <div class="searchhelper">Search Reports, Charts, Emails or Notifications</div>
-                </div>
-                <!-- /Page Sidebar Header -->
-                <!-- Sidebar Menu -->
-                <ul class="nav sidebar-menu">
-                    <!--Dashboard-->
-                   
-
-                    <li>
-                        <a href="#" class="menu-dropdown">
-                            <i class="menu-icon fa fa-file-text"></i>
-                            <span class="menu-text">文章</span>
-                            <i class="menu-expand"></i>
-                        </a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="list.html">
-                                    <span class="menu-text">
-                                        文章列表                                    </span>
-                                    <i class="menu-expand"></i>
-                                </a>
-                            </li>
-                        </ul>                            
-                    </li> 
-
-                    <li>
-                        <a href="#" class="menu-dropdown">
-                            <i class="menu-icon fa fa-gear"></i>
-                            <span class="menu-text">系统</span>
-                            <i class="menu-expand"></i>
-                        </a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="/admin/document/index.html">
-                                    <span class="menu-text">
-                                        配置                                   </span>
-                                    <i class="menu-expand"></i>
-                                </a>
-                            </li>
-                        </ul>                            
-                    </li>                        
-                    
-                                          
-                    
-                </ul>
-                <!-- /Sidebar Menu -->
-            </div>
-            <!-- /Page Sidebar -->
-            <!-- Page Content -->
-            <div class="page-content">
-                <!-- Page Breadcrumb -->
-                <div class="page-breadcrumbs">
-                    <ul class="breadcrumb">
-                                        <li>
-                        <a href="#">尾盘猎庄</a>
-                    </li>
-                                        <li>
-                        <a href="#">文章管理</a>
-                    </li>
-                                        <li class="active">添加</li>
-                                        </ul>
-                </div>
-                <!-- /Page Breadcrumb -->
-
-                <!-- Page Body -->
-                <div class="page-body">
-                    
-<div class="row">
-    <div class="col-lg-12 col-sm-12 col-xs-12">
-        <div class="widget">
-            <div class="widget-header bordered-bottom bordered-blue">
-                <span class="widget-caption">新建</span>
-            </div>
-            <div class="widget-body">
-                <div id="horizontal-form">
-                    <form class="form-horizontal" role="form" id="myform">
-                        <div class="form-group">
-                            <label for="title" class="col-sm-2 control-label no-padding-right">标题</label>
-                            <div class="col-sm-6">
-                                <input class="form-control" id="title" placeholder="" name="title" required="" type="text">
-                            </div>
-                            <p class="help-block col-sm-4 red">* 必填</p>
-                        </div>
-						
+				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+					<!--需要区分是员工修改还是添加；-->
+					<form th:action="@{/active}" method="post">
+						<!--发送put请求修改员工数据-->
+						<!--
+						1、SpringMVC中配置HiddenHttpMethodFilter;（SpringBoot自动配置好的）
+						2、页面创建一个post表单
+						3、创建一个input项，name="_method";值就是我们指定的请求方式
+						-->
+						<input type="hidden" name="_method" value="put" th:if="${active!=null}"/>
+						<input type="hidden" name="id" th:if="${active!=null}" th:value="${active.id}">
 						<div class="form-group">
-                            <label for="activeDesc" class="col-sm-2 control-label no-padding-right">內容</label>
-                            <div class="col-sm-6">
+							<label>标题</label>
+							<input name="title" type="text" class="form-control" placeholder="今日盘点" th:value="${active!=null}?${active.title}">
+						</div>
+						<div class="form-group">
+							<label>内容</label>
+							<textarea id="editor_id" name="activeDesc" style="width:700px;height:300px;" th:text="${active!=null}?${active.activeDesc}" > </textarea>
+						</div>
+						<div class="form-group">
+							<label>VIP</label><br/>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="isVip" value="1" th:checked="${active!=null}?${active.isVip==1}">
+								<label class="form-check-label">是</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="isVip" value="0" th:checked="${active!=null}?${active.isVip==0}">
+								<label class="form-check-label">否</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label>上架</label><br/>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="issue" value="1" th:checked="${active!=null}?${active.issue==1}">
+								<label class="form-check-label">是</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="issue" value="0" th:checked="${active!=null}?${active.issue==0}">
+								<label class="form-check-label">否</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label>添加浏览量</label>
+							<input name="falseViews" type="text" class="form-control" placeholder="0" th:value="${active!=null}?${active.falseViews}">
+						</div>
+						<!--<div class="form-group">
+							<label>department</label>
+							&lt;!&ndash;提交的是部门的id&ndash;&gt;
+							<select class="form-control" name="department.id">
+								<option th:selected="${emp!=null}?${dept.id == emp.department.id}" th:value="${dept.id}" th:each="dept:${depts}" th:text="${dept.departmentName}">1</option>
+							</select>
+						</div>-->
+						<!--<div class="form-group">
+							<label>Birth</label>
+							<input name="birth" type="text" class="form-control" placeholder="zhangsan" th:value="${emp!=null}?${#dates.format(emp.birth, 'yyyy-MM-dd HH:mm')}">
+						</div>-->
+						<button type="submit" class="btn btn-primary" th:text="${emp!=null}?'修改':'添加'">添加</button>
+					</form>
+				</main>
+			</div>
+		</div>
 
-                                <textarea id="editor_id" name="activeDesc" style="width:700px;height:300px;"> 这里输入内容...</textarea>
-                            </div>
-                            <p class="help-block col-sm-4 red">* 必填</p>
-                        </div>
+		<!-- Bootstrap core JavaScript
+    ================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="asserts/js/jquery-3.2.1.slim.min.js" th:src="@{/webjars/jquery/3.3.1/jquery.js}"></script>
+		<script type="text/javascript" src="asserts/js/popper.min.js" th:src="@{/webjars/popper.js/1.11.1/dist/popper.js}"></script>
+		<script type="text/javascript" src="asserts/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/4.0.0/js/bootstrap.js}"></script>
 
+		<!-- Icons -->
+		<script type="text/javascript" src="asserts/js/feather.min.js" th:src="@{/asserts/js/feather.min.js}"></script>
+		<script>
+			feather.replace()
+		</script>
 
-                        <div class="form-group">
-                            <label for="group_id" class="col-sm-2 control-label no-padding-right">VIP</label>
-                            <div class="col-sm-6">
-                                <select name="isVip" style="width: 100%;">
-                                                                        <option selected="selected" value="1">是</option>
-																		<option selected="selected" value="0">否</option>
-                                                                 </select>
-																	
-                            </div>
-                        </div> 
-						
-						 <div class="form-group">
-                            <label for="falseViews" class="col-sm-2 control-label no-padding-right">浏览量</label>
-                            <div class="col-sm-6">
-                                <input class="form-control" id="falseViews" placeholder="" name="falseViews" required="" type="text">
-                            </div>
-                            <p class="help-block col-sm-4 red">* 必填</p>
-                        </div>
+	</body>
 
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <button type="button" onclick="validate()" class="btn btn-default">保存信息</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-                </div>
-                <!-- /Page Body -->
-            </div>
-            <!-- /Page Content -->
-		</div>	
-	</div>
-
-	    <!--Basic Scripts-->
-    <script src="style/jquery_002.js" th:src="@{/asserts/style/jquery_002.js}"></script>
-    <script src="style/bootstrap.js" th:src="@{/asserts/style/bootstrap.js}"></script>
-    <script src="style/jquery.js" th:src="@{/asserts/style/jquery.js}"></script>
-    <!--Beyond Scripts-->
-    <script src="style/beyond.js" th:src="@{asserts/style/beyond.js}"></script>
-    
-
-
-</body></html>
+</html>

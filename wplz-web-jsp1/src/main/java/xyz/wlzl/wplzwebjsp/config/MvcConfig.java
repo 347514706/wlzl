@@ -20,11 +20,12 @@ public class MvcConfig implements WebMvcConfigurer {
         registry.addViewController("/index.html").setViewName("login");
         registry.addViewController("/main.html").setViewName("dashboard");
         registry.addViewController("/add.html").setViewName("add");
+        registry.addViewController("/list.html").setViewName("list");
     }
 
-    /*@Override
+    @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("**")
-                       .excludePathPatterns("/index.html","/","/user/login");
-    }*/
+        registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
+                       .excludePathPatterns("/index.html","/","/user/login","/jsp/**","/asserts/**");
+    }
 }
