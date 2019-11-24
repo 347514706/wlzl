@@ -1,7 +1,4 @@
-D:\Program Files\workpace\wplz-web-jsp1\src\main\java\xyz\wlzl\wplzwebjsp\client\ActiveClient.java
-D:\Program Files\workpace\wplz-web-jsp1\src\main\java\xyz\wlzl\wplzwebjsp\component\MyLocaleResolver.java
 D:\Program Files\workpace\wplz-web-jsp1\src\main\java\xyz\wlzl\wplzwebjsp\WplzWebJspApplication.java
-D:\Program Files\workpace\wplz-web-jsp1\src\main\java\xyz\wlzl\wplzwebjsp\client\UserClient.java
 D:\Program Files\workpace\wplz-web-jsp1\src\main\java\xyz\wlzl\wplzwebjsp\entity\Message.java
 D:\Program Files\workpace\wplz-web-jsp1\src\main\java\xyz\wlzl\wplzwebjsp\component\LoginHandlerInterceptor.java
 D:\Program Files\workpace\wplz-web-jsp1\src\main\java\xyz\wlzl\wplzwebjsp\ServletInitializer.java
@@ -9,4 +6,9 @@ D:\Program Files\workpace\wplz-web-jsp1\src\main\java\xyz\wlzl\wplzwebjsp\entity
 D:\Program Files\workpace\wplz-web-jsp1\src\main\java\xyz\wlzl\wplzwebjsp\controller\UserController.java
 D:\Program Files\workpace\wplz-web-jsp1\src\main\java\xyz\wlzl\wplzwebjsp\config\MvcConfig.java
 D:\Program Files\workpace\wplz-web-jsp1\src\main\java\xyz\wlzl\wplzwebjsp\entity\ActiveTbl.java
+D:\Program Files\workpace\wplz-web-jsp1\src\main\java\xyz\wlzl\wplzwebjsp\controller\InterfaceController.java
+D:\Program Files\workpace\wplz-web-jsp1\src\main\java\xyz\wlzl\wplzwebjsp\entity\Active.java
+D:\Program Files\workpace\wplz-web-jsp1\src\main\java\xyz\wlzl\wplzwebjsp\client\ActiveClient.java
+D:\Program Files\workpace\wplz-web-jsp1\src\main\java\xyz\wlzl\wplzwebjsp\component\MyLocaleResolver.java
+D:\Program Files\workpace\wplz-web-jsp1\src\main\java\xyz\wlzl\wplzwebjsp\client\UserClient.java
 D:\Program Files\workpace\wplz-web-jsp1\src\main\java\xyz\wlzl\wplzwebjsp\controller\activeController.java

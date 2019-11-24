@@ -4,7 +4,7 @@ server:
   max-http-header-size: 20480
 spring:
   application:
-    name: wplz-active-server3
+    name: wplz-active-server4
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://112.126.102.252:13306/wlzl?characterEncoding=utf-8&useSSL=false
@@ -21,5 +21,5 @@ eureka:
     service-url:
       defaultZone: http://112.126.102.252:8000/eureka
   instance:
-      prefer-ip-address: true
-      ip-address: 112.126.102.252
+    prefer-ip-address: true
+    ip-address: 112.126.102.252

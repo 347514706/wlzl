@@ -3,6 +3,7 @@ package xyz.wlzl.wplzactiveserver.service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import xyz.wlzl.wplzactiveserver.entity.Active;
 import xyz.wlzl.wplzactiveserver.entity.ActiveTbl;
 
 
@@ -18,5 +19,7 @@ public interface ActiveService {
 
      ActiveTbl activeFindOne(Integer id);
 
+     List<Active> findActives();
 
+     Active findOne(Integer id);
 }

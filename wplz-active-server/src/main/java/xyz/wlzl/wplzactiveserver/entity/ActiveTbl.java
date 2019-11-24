@@ -15,8 +15,8 @@ public class ActiveTbl {
     private Integer isVip;
     private Integer issue;
     private Integer userId;
-    private String trueViews;
-    private String falseViews;
+    private Integer trueViews;
+    private Integer falseViews;
     private String activeDesc;
 
     public Integer getId() {
@@ -67,19 +67,19 @@ public class ActiveTbl {
         this.userId = userId;
     }
 
-    public String getTrueViews() {
+    public Integer getTrueViews() {
         return trueViews;
     }
 
-    public void setTrueViews(String trueViews) {
+    public void setTrueViews(Integer trueViews) {
         this.trueViews = trueViews;
     }
 
-    public String getFalseViews() {
+    public Integer getFalseViews() {
         return falseViews;
     }
 
-    public void setFalseViews(String falseViews) {
+    public void setFalseViews(Integer falseViews) {
         this.falseViews = falseViews;
     }
 

@@ -58,6 +58,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.1.10.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.2.1" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:1.4" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.51" level="project" />
     <orderEntry type="module-library">
       <library name="Maven: json_simple:json_simple:1.1">
         <CLASSES>
