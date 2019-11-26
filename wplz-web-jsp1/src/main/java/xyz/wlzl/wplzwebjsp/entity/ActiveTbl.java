@@ -86,18 +86,5 @@ public class ActiveTbl  implements Serializable{
         this.activeDesc = activeDesc;
     }
 
-    @Override
-    public String toString() {
-        return "ActiveTbl{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", createTime=" + createTime +
-                ", isVip=" + isVip +
-                ", issue=" + issue +
-                ", userId=" + userId +
-                ", trueViews='" + trueViews + '\'' +
-                ", falseViews='" + falseViews + '\'' +
-                ", activeDesc='" + activeDesc + '\'' +
-                '}';
-    }
+
 }
