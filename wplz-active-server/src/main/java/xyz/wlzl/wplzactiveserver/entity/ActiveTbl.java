@@ -90,4 +90,6 @@ public class ActiveTbl {
     public void setActiveDesc(String activeDesc) {
         this.activeDesc = activeDesc;
     }
+
+
 }

@@ -61,9 +61,14 @@ public class ActiveServiceImpl implements ActiveService{
     @Override
     public List<Active> findActives() {
         List<Active> list =new ArrayList<>();
-        List<ActiveTbl> actives = activeTblDao.findAll();
+        Sort sort = new Sort(Sort.Direction.DESC, "createTime");
+
+        List<ActiveTbl> actives = activeTblDao.findAll(sort);
+
         for (ActiveTbl activeTbl:actives
              ) {
+
+
             if (activeTbl.getIssue()==1){
             Active active=new Active();
              active.setTitle(activeTbl.getTitle());
