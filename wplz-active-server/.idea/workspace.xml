@@ -510,7 +510,7 @@
       <workItem from="1574260826536" duration="510000" />
       <workItem from="1574489497873" duration="3857000" />
       <workItem from="1574573318455" duration="9198000" />
-      <workItem from="1574737743019" duration="5421000" />
+      <workItem from="1574737743019" duration="5449000" />
     </task>
     <task id="LOCAL-00001" summary="服务层修改接口时间">
       <created>1574742974395</created>
@@ -541,7 +541,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47817000" />
+    <option name="totallyTimeSpent" value="47845000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
