@@ -9,7 +9,7 @@ import xyz.wlzl.wplzwebjsp.entity.ActiveTbl;
 
 import java.util.List;
 
-@FeignClient(value = "wplz-active-server")
+@FeignClient(value = "wplz-active-server4")
 public interface ActiveClient {
 
     @RequestMapping("/activeAdd")
