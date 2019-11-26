@@ -4,7 +4,7 @@ server:
   max-http-header-size: 20480
 spring:
   application:
-    name: wplz-active-server
+    name: wplz-active-server4
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://112.126.102.252:13306/wlzl?characterEncoding=utf-8&useSSL=false

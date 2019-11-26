@@ -1,11 +1,15 @@
 package xyz.wlzl.wplzactiveserver.entity;
 
+import com.alibaba.fastjson.annotation.JSONField;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.Entity;
 import java.util.Date;
 
 public class Active {
     private Integer id;
     private  String title;
+    @JSONField(format = "MM-dd HH:mm")
     private Date createTime;
     private Integer isVip;
     private Integer falseViews;
