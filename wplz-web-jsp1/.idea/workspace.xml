@@ -9,50 +9,18 @@
   <component name="ChangeListManager">
     <list default="true" id="2bf4e302-eab9-4514-b641-f3d7443526c8" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../wplz-active-server/.idea/libraries/Maven__com_alibaba_fastjson_1_2_51.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wplz-active-server/target/classes/xyz/wlzl/wplzactiveserver/WplzActiveServerApplication.class" afterPath="$PROJECT_DIR$/../wplz-active-server/target/classes/xyz/wlzl/wplzactiveserver/WplzActiveServerApplication.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wplz-active-server/target/classes/xyz/wlzl/wplzactiveserver/controller/ActiveController.class" afterPath="$PROJECT_DIR$/../wplz-active-server/target/classes/xyz/wlzl/wplzactiveserver/controller/ActiveController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wplz-active-server/target/classes/xyz/wlzl/wplzactiveserver/entity/Active.class" afterPath="$PROJECT_DIR$/../wplz-active-server/target/classes/xyz/wlzl/wplzactiveserver/entity/Active.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wplz-active-server/target/classes/xyz/wlzl/wplzactiveserver/entity/ActiveTbl.class" afterPath="$PROJECT_DIR$/../wplz-active-server/target/classes/xyz/wlzl/wplzactiveserver/entity/ActiveTbl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wplz-active-server/target/classes/xyz/wlzl/wplzactiveserver/service/ActiveService.class" afterPath="$PROJECT_DIR$/../wplz-active-server/target/classes/xyz/wlzl/wplzactiveserver/service/ActiveService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wplz-active-server/target/classes/xyz/wlzl/wplzactiveserver/service/impl/ActiveServiceImpl.class" afterPath="$PROJECT_DIR$/../wplz-active-server/target/classes/xyz/wlzl/wplzactiveserver/service/impl/ActiveServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/ServletInitializer.class" afterPath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/ServletInitializer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/WplzWebJspApplication.class" afterPath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/WplzWebJspApplication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/client/UserClient.class" afterPath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/client/UserClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/component/LoginHandlerInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/component/LoginHandlerInterceptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/component/MyLocaleResolver.class" afterPath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/component/MyLocaleResolver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/config/MvcConfig.class" afterPath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/config/MvcConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/controller/InterfaceController.class" afterPath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/controller/InterfaceController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/controller/activeController.class" afterPath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/controller/activeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/entity/Active.class" afterPath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/entity/Active.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/entity/ActiveTbl.class" afterPath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/entity/ActiveTbl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/entity/Message.class" afterPath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/entity/Message.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/entity/User.class" afterPath="$PROJECT_DIR$/target/classes/xyz/wlzl/wplzwebjsp/entity/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wplz.war" afterPath="$PROJECT_DIR$/target/wplz.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/ServletInitializer.class" afterPath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/ServletInitializer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/WplzWebJspApplication.class" afterPath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/WplzWebJspApplication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/client/UserClient.class" afterPath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/client/UserClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/component/LoginHandlerInterceptor.class" afterPath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/component/LoginHandlerInterceptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/component/MyLocaleResolver.class" afterPath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/component/MyLocaleResolver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/config/MvcConfig.class" afterPath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/config/MvcConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/controller/InterfaceController.class" afterPath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/controller/InterfaceController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/controller/UserController.class" afterPath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/controller/activeController.class" afterPath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/controller/activeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/entity/Active.class" afterPath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/entity/Active.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/entity/ActiveTbl.class" afterPath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/entity/ActiveTbl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/entity/Message.class" afterPath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/entity/Message.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/entity/User.class" afterPath="$PROJECT_DIR$/target/wplz/WEB-INF/classes/xyz/wlzl/wplzwebjsp/entity/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wplz/WEB-INF/lib/commons-fileupload-1.2.1.jar" afterPath="$PROJECT_DIR$/target/wplz/WEB-INF/lib/commons-fileupload-1.2.1.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wplz-active-server/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../wplz-active-server/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wplz-active-server/pom.xml" afterPath="$PROJECT_DIR$/../wplz-active-server/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wplz-active-server/src/main/java/xyz/wlzl/wplzactiveserver/entity/Active.java" afterPath="$PROJECT_DIR$/../wplz-active-server/src/main/java/xyz/wlzl/wplzactiveserver/entity/Active.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wplz-active-server/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/../wplz-active-server/src/main/resources/application.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../wplz-active-server/wplz-active-server.iml" afterPath="$PROJECT_DIR$/../wplz-active-server/wplz-active-server.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/xyz/wlzl/wplzwebjsp/client/ActiveClient.java" afterPath="$PROJECT_DIR$/src/main/java/xyz/wlzl/wplzwebjsp/client/ActiveClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/xyz/wlzl/wplzwebjsp/entity/Active.java" afterPath="$PROJECT_DIR$/src/main/java/xyz/wlzl/wplzwebjsp/entity/Active.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wplz/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/wplz/META-INF/MANIFEST.MF" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -654,7 +622,7 @@
       <workItem from="1574338861486" duration="3837000" />
       <workItem from="1574475147091" duration="23587000" />
       <workItem from="1574571576318" duration="6387000" />
-      <workItem from="1574736311231" duration="3950000" />
+      <workItem from="1574736311231" duration="4116000" />
     </task>
     <task id="LOCAL-00001" summary="测试idea集成git">
       <created>1574736926881</created>
@@ -663,11 +631,18 @@
       <option name="project" value="LOCAL" />
       <updated>1574736926881</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="修改接口时间">
+      <created>1574742719891</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1574742719891</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125236000" />
+    <option name="totallyTimeSpent" value="125402000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -723,7 +698,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="测试idea集成git" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试idea集成git" />
+    <MESSAGE value="修改接口时间" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改接口时间" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
