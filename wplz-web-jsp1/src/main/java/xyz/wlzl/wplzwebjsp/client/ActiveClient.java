@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import xyz.wlzl.wplzwebjsp.entity.Active;
 import xyz.wlzl.wplzwebjsp.entity.ActiveTbl;
+import xyz.wlzl.wplzwebjsp.entity.Title;
 
 import java.util.List;
 
@@ -24,8 +25,10 @@ public interface ActiveClient {
     @RequestMapping("/activeFindOne")
     ActiveTbl activeFindOne(@RequestParam(value = "id") Integer id);
     @RequestMapping("/active/findAll")
-    List<Active> activeFindAll();
+    List<Title> activeFindAll(@RequestParam(value = "isVip") Integer isVip);
     @RequestMapping("/active/findOne")
     Active findOne(@RequestParam(value = "id") Integer id);
+    @RequestMapping("/activeUpdate")
+    void activeUpdate(ActiveTbl activeTbl);
 
 }

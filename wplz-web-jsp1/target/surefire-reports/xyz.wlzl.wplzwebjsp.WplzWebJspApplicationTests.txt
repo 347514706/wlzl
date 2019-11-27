@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: xyz.wlzl.wplzwebjsp.WplzWebJspApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.388 s - in xyz.wlzl.wplzwebjsp.WplzWebJspApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.603 s - in xyz.wlzl.wplzwebjsp.WplzWebJspApplicationTests

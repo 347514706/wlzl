@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import xyz.wlzl.wplzwebjsp.client.ActiveClient;
 import xyz.wlzl.wplzwebjsp.entity.Active;
+import xyz.wlzl.wplzwebjsp.entity.Title;
 
 import java.util.List;
 
@@ -18,8 +19,8 @@ public class InterfaceController {
     @Autowired
     private ActiveClient activeClient;
     @RequestMapping("/active/findAll")
-    public String findAll(){
-        List<Active> actives = activeClient.activeFindAll();
+    public String findAll(@RequestParam("isVip") Integer isVip){
+        List<Title> actives = activeClient.activeFindAll(isVip);
         String s = com.alibaba.fastjson.JSONArray.toJSONString(actives);
 
         return s;
