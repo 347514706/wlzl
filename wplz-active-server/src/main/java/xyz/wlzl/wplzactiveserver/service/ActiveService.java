@@ -5,6 +5,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import xyz.wlzl.wplzactiveserver.entity.Active;
 import xyz.wlzl.wplzactiveserver.entity.ActiveTbl;
+import xyz.wlzl.wplzactiveserver.entity.Title;
 
 
 import java.util.List;
@@ -22,4 +23,8 @@ public interface ActiveService {
      List<Active> findActives();
 
      Active findOne(Integer id);
+
+     void update(ActiveTbl activeTbl);
+
+     List<Title> findList(Integer isVip);
 }

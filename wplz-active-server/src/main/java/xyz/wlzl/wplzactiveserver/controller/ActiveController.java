@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import xyz.wlzl.wplzactiveserver.entity.Active;
 import xyz.wlzl.wplzactiveserver.entity.ActiveTbl;
+import xyz.wlzl.wplzactiveserver.entity.Title;
 import xyz.wlzl.wplzactiveserver.service.ActiveService;
 import xyz.wlzl.wplzactiveserver.service.impl.ActiveServiceImpl;
 
@@ -22,6 +23,10 @@ public class ActiveController {
     public void activeAdd(@RequestBody ActiveTbl activeTbl){
 
         activeService.save(activeTbl);
+    }
+    @RequestMapping("/activeUpdate")
+    public void activeUpdate(@RequestBody ActiveTbl activeTbl){
+        activeService.update(activeTbl);
     }
 
     @RequestMapping("/activeList")
@@ -45,9 +50,9 @@ public class ActiveController {
         return activeTbl;
     }
     @RequestMapping("/active/findAll")
-    public List<Active> findActives(){
+    public List<Title> findActives(@RequestParam("isVip") Integer isVip){
 
-        return activeService.findActives();
+        return activeService.findList(isVip);
     }
     @RequestMapping("/active/findOne")
     public Active findOne(@RequestParam("id") Integer id){

@@ -13,12 +13,11 @@ import org.springframework.stereotype.Service;
 import xyz.wlzl.wplzactiveserver.dao.ActiveTblDao;
 import xyz.wlzl.wplzactiveserver.entity.Active;
 import xyz.wlzl.wplzactiveserver.entity.ActiveTbl;
+import xyz.wlzl.wplzactiveserver.entity.Title;
 import xyz.wlzl.wplzactiveserver.service.ActiveService;
+import xyz.wlzl.wplzactiveserver.utils.ToHtml;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class ActiveServiceImpl implements ActiveService{
@@ -98,5 +97,36 @@ public class ActiveServiceImpl implements ActiveService{
         active.setIsVip(activeTbl.getIsVip());
         active.setTitle(activeTbl.getTitle());
         return active;
+    }
+
+    @Override
+    public void update(ActiveTbl activeTbl) {
+        activeTblDao.save(activeTbl);
+    }
+
+    @Override
+    public List<Title> findList(Integer isVip) {
+        List<Map<String, Object>> maps = activeTblDao.findList(isVip, 1);
+        List<Title> list = new ArrayList<Title>();
+        if(maps==null){
+            return null;
+        }else {
+            for (Map map : maps) {
+                Title title = new Title();
+                title.setCreateTime((Date) map.get("create_time"));
+                title.setFalseViews((int) map.get("false_views"));
+                title.setId((int) map.get("id"));
+                ToHtml toHtml = new ToHtml();
+                String src = toHtml.toImg(map.get("active_desc").toString());
+                title.setImg(src);
+                String span = toHtml.toSpan(map.get("active_desc").toString());
+                title.setTitleDesc(span);
+                title.setTitle(map.get("title").toString());
+                list.add(title);
+            }
+
+
+            return list;
+        }
     }
 }
