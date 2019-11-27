@@ -47,7 +47,7 @@ public class activeController {
     @PutMapping("/active")
     public String activeAdd(ActiveTbl activeTbl){
         System.out.println(activeTbl.toString());
-        activeClient.activeAdd(activeTbl);
+        activeClient.activeUpdate(activeTbl);
         return "redirect:/activeList";
 
     }

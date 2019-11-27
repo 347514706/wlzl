@@ -112,6 +112,9 @@
 						-->
 						<input type="hidden" name="_method" value="put" th:if="${active!=null}"/>
 						<input type="hidden" name="id" th:if="${active!=null}" th:value="${active.id}">
+						<input type="hidden" name="userId" th:if="${active!=null}" th:value="${active.userId}">
+						<input type="hidden" name="trueViews" th:if="${active!=null}" th:value="${active.trueViews}">
+						<input type="hidden" name="createTime" th:if="${active!=null}" th:value="${active.createTime}">
 						<div class="form-group">
 							<label>标题</label>
 							<input name="title" type="text" class="form-control" placeholder="今日盘点" th:value="${active!=null}?${active.title}">
@@ -157,7 +160,7 @@
 							<label>Birth</label>
 							<input name="birth" type="text" class="form-control" placeholder="zhangsan" th:value="${emp!=null}?${#dates.format(emp.birth, 'yyyy-MM-dd HH:mm')}">
 						</div>-->
-						<button type="submit" class="btn btn-primary" th:text="${emp!=null}?'修改':'添加'">添加</button>
+						<button type="submit" class="btn btn-primary" th:text="${active!=null}?'修改':'添加'">添加</button>
 					</form>
 				</main>
 			</div>
