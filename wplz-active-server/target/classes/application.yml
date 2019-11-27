@@ -1,10 +1,10 @@
 
 server:
-  port: 8081
+  port: 8083
   max-http-header-size: 20480
 spring:
   application:
-    name: wplz-active-server1
+    name: wplz-active-server
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://112.126.102.252:13306/wlzl?characterEncoding=utf-8&useSSL=false

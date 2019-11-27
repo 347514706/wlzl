@@ -58,4 +58,5 @@ public class ActiveController {
     public Active findOne(@RequestParam("id") Integer id){
         return activeService.findOne(id);
     }
+
 }
