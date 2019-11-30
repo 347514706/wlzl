@@ -60,7 +60,7 @@
 								<tr>
 									<th class="text-center">ID</th>
 									<th class="text-center">标题</th>
-									<th class="text-center">VIP</th>
+									<th class="text-center">栏目</th>
 									<th class="text-center">状态</th>
 									<th class="text-center">浏览量</th>
 									<th class="text-center">添加量</th>
@@ -72,12 +72,12 @@
 								<tr th:each="active:${activeList}">
 									<td class="text-center" th:text="${active.id}"></td>
 									<td class="text-center" th:text="${active.title}"></td>
-									<td class="text-center" th:text="${active.isVip}==1?'是':'否'"></td>
+									<td class="text-center" th:text="${active.isVip}==1?'盘中直播':'历史战绩'"></td>
 									<td class="text-center" th:text="${active.issue}==1?'上架':'未上架'"></td>
 									<td class="text-center" th:text="${active.trueViews}"></td>
 									<td class="text-center" th:text="${active.falseViews}"></td>
 									<td class="text-center" th:text="${#dates.format(active.createTime,'MM-dd HH:mm')}"></td>
-									<td>
+									<td class="text-center">
 										<a class="btn btn-sm btn-primary" th:href="@{/activeUp/}+${active.id}">编辑</a>
 										<button th:attr="del_uri=@{/active/}+${active.id}" class="btn btn-sm btn-danger deleteBtn">删除</button>
 									</td>
