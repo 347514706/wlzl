@@ -49,8 +49,13 @@ public class ToHtml {
         }
         if(list.size()==0){
             return htmlStr;
+        }else {
+            StringBuffer buf = new StringBuffer();
+            for (String s2:list) {
+                buf.append(s2);
+            }
+            return buf.toString();
         }
-        return list.get(0);
 
     }
 
