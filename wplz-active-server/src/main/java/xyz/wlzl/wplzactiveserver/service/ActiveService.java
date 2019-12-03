@@ -26,5 +26,7 @@ public interface ActiveService {
 
      void update(ActiveTbl activeTbl);
 
-     List<Title> findList(Integer isVip);
+     List<Title> findList(Integer isVip ,Integer pageNo);
+
+
 }

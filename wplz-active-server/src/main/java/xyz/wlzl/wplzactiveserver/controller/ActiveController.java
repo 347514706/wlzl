@@ -26,6 +26,7 @@ public class ActiveController {
     }
     @RequestMapping("/activeUpdate")
     public void activeUpdate(@RequestBody ActiveTbl activeTbl){
+        System.out.println(activeTbl.toString());
         activeService.update(activeTbl);
     }
 
@@ -50,9 +51,9 @@ public class ActiveController {
         return activeTbl;
     }
     @RequestMapping("/active/findAll")
-    public List<Title> findActives(@RequestParam("isVip") Integer isVip){
+    public List<Title> findActives(@RequestParam("isVip") Integer isVip,@RequestParam("pageNo") Integer pageNo){
 
-        return activeService.findList(isVip);
+        return activeService.findList(isVip,pageNo);
     }
     @RequestMapping("/active/findOne")
     public Active findOne(@RequestParam("id") Integer id){

@@ -1,5 +1,7 @@
 package xyz.wlzl.wplzactiveserver.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,6 +13,7 @@ public class ActiveTbl {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private  String title;
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
     private Integer isVip;
     private Integer issue;
@@ -91,5 +94,18 @@ public class ActiveTbl {
         this.activeDesc = activeDesc;
     }
 
-
+    @Override
+    public String toString() {
+        return "ActiveTbl{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", createTime=" + createTime +
+                ", isVip=" + isVip +
+                ", issue=" + issue +
+                ", userId=" + userId +
+                ", trueViews=" + trueViews +
+                ", falseViews=" + falseViews +
+                ", activeDesc='" + activeDesc + '\'' +
+                '}';
+    }
 }

@@ -104,9 +104,11 @@ public class ActiveServiceImpl implements ActiveService{
         activeTblDao.save(activeTbl);
     }
 
+
+
     @Override
-    public List<Title> findList(Integer isVip) {
-        List<Map<String, Object>> maps = activeTblDao.findList(isVip, 1);
+    public List<Title> findList(Integer isVip ,Integer pageNo) {
+        List<Map<String, Object>> maps = activeTblDao.findTwos(isVip, 1,10*(pageNo-1));
         List<Title> list = new ArrayList<Title>();
         if(maps==null){
             return null;

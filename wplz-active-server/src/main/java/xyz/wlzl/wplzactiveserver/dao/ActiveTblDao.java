@@ -22,4 +22,7 @@ public interface ActiveTblDao extends JpaRepository<ActiveTbl,Integer> {
      List<ActiveTbl> findActives();
     @Query(value="select a.id ,a.title,a.create_time,a.is_vip,a.false_views,a.active_desc from active_tbl a where a.is_vip=?1 and a.issue=?2 order by id DESC ",nativeQuery = true)
     List<Map<String,Object>> findList(Integer isVip, Integer issue);
+
+    @Query(value = "select a.id ,a.title,a.create_time,a.is_vip,a.false_views,a.active_desc from active_tbl a where a.is_vip=?1 and a.issue=?2 order by id DESC LIMIT ?3,10",nativeQuery = true)
+    List<Map<String,Object>> findTwos(Integer isVip,Integer issue,Integer pageNo);
 }
