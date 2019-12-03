@@ -1,11 +1,16 @@
 package xyz.wlzl.wplzwebjsp.entity;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.deser.std.DateDeserializers;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
 public class ActiveTbl  implements Serializable{
     private Integer id;
     private  String title;
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
     private Integer isVip;
     private Integer issue;
@@ -86,5 +91,18 @@ public class ActiveTbl  implements Serializable{
         this.activeDesc = activeDesc;
     }
 
-
+    @Override
+    public String toString() {
+        return "ActiveTbl{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", createTime=" + createTime +
+                ", isVip=" + isVip +
+                ", issue=" + issue +
+                ", userId=" + userId +
+                ", trueViews='" + trueViews + '\'' +
+                ", falseViews='" + falseViews + '\'' +
+                ", activeDesc='" + activeDesc + '\'' +
+                '}';
+    }
 }

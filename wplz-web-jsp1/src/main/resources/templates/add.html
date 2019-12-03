@@ -114,7 +114,7 @@
 						<input type="hidden" name="id" th:if="${active!=null}" th:value="${active.id}">
 						<input type="hidden" name="userId" th:if="${active!=null}" th:value="${active.userId}">
 						<input type="hidden" name="trueViews" th:if="${active!=null}" th:value="${active.trueViews}">
-						<input type="hidden" name="createTime" th:if="${active!=null}" th:value="${active.createTime}">
+						<input type="hidden" name="createTime" th:if="${active!=null}" th:value="${#dates.format(active.createTime,'yyyy-MM-dd HH:mm:ss')}">
 						<div class="form-group">
 							<label>标题</label>
 							<input name="title" type="text" class="form-control" placeholder="今日盘点" th:value="${active!=null}?${active.title}">

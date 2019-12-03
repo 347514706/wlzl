@@ -19,8 +19,8 @@ public class InterfaceController {
     @Autowired
     private ActiveClient activeClient;
     @RequestMapping("/active/findAll")
-    public String findAll(@RequestParam("isVip") Integer isVip){
-        List<Title> actives = activeClient.activeFindAll(isVip);
+    public String findAll(@RequestParam("isVip") Integer isVip,@RequestParam("pageNo") Integer pageNo){
+        List<Title> actives = activeClient.activeFindAll(isVip,pageNo);
         String s = com.alibaba.fastjson.JSONArray.toJSONString(actives);
 
         return s;

@@ -25,7 +25,7 @@ public interface ActiveClient {
     @RequestMapping("/activeFindOne")
     ActiveTbl activeFindOne(@RequestParam(value = "id") Integer id);
     @RequestMapping("/active/findAll")
-    List<Title> activeFindAll(@RequestParam(value = "isVip") Integer isVip);
+    List<Title> activeFindAll(@RequestParam(value = "isVip") Integer isVip,@RequestParam(value = "pageNo") Integer pageNo);
     @RequestMapping("/active/findOne")
     Active findOne(@RequestParam(value = "id") Integer id);
     @RequestMapping("/activeUpdate")
